@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Expenses chart component</title>
+</head>
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js">
+  </script>
+  <div class="content">
+    <div class="balance">
+      <div class="title">Meu saldo</div>
+      <svg class="logo" width="60" height="44" viewBox="0 0 72 48" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fill-rule="evenodd">
+          <circle fill="#382314" cx="48" cy="24" r="24" />
+          <circle stroke="#FFF" stroke-width="2" cx="24" cy="24" r="23" />
+        </g>
+      </svg>
+      <div class="total-dolar">R$921.48</div>
+    </div>
+    <div class="dados">
+      <div class="graphbox">Gastos - Últimos 7 dias</div>
+      <canvas id="myChart"></canvas>
+      <script>
+        var days = ["Seg", "Ter", "Qua", "Qui", "Sex", "Sab", "Dom"]
+        var amounth = [17.45, 34.91, 52.36, 31.07, 23.39, 43.28, 25.48]
+        var barColors = [
+          "hsl(10, 79%, 65%)",
+          "hsl(10, 79%, 65%)",
+          "hsl(186, 34%, 60%)",
+          "hsl(10, 79%, 65%)",
+          "hsl(10, 79%, 65%)",
+          "hsl(10, 79%, 65%)",
+          "hsl(10, 79%, 65%)",
+        ];
+        var barBorderColors = [
+          "hsl(10, 79%, 65%)",
+          "hsl(10, 79%, 65%)",
+          "hsl(186, 34%, 60%)",
+          "hsl(10, 79%, 65%)",
+          "hsl(10, 79%, 65%)",
+          "hsl(10, 79%, 65%)",
+          "hsl(10, 79%, 65%)",
+        ];
+        new Chart("myChart", {
+          type: "bar",
+          data: {
+            labels: days,
+            datasets: [{
+              backgroundColor: barColors,
+              borderColor: barBorderColors,
+              borderWidth: 1,
+              borderRadius: 10,
+              data: amounth
+            }]
+          },
+          options: {
+            scales: {
+              xAxes: [{
+                gridLines: {
+                  color: "rgba(0, 0, 0, 0)",
+                }
+              }],
+
+              yAxes: [{
+                gridLines: {
+                  color: "rgba(0, 0, 0, 0)",
+                },
+
+                display: false,
+                tickMarkLength: 0
+              }]
+            },
+            legend: {
+              display: false
+            }
+          }
+        });
+      </script>
+
+      <div class="total">Total este mês<br></div>
+      <div class="dolar">R$478.33</div>
+      <div class="money">+2.4%<br></div>
+      <div class="month">Total no mês passado</div>
+    </div>
+  </div>
+  </div>
+  <div class="attribution">
+    Desafio por <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Feito com ❤️ Por <a href="#">Gustavo Souza </a>.
+</body>
+</html>

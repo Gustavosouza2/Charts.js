@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color : hsl(27, 66%, 92%);
+}
+
+
+.balance {
+    background-color: hsl(10, 79%, 65%);
+    border-radius: 9px;
+    margin-top: 8%;
+    position: relative;
+    margin-left: 35%;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    font-size: 18px;
+    width: 430px;
+    height: 90px;  
+}
+
+.title {
+    font-family: 'DM sans';
+    color: white;
+    display: flex;
+    margin-right: 90%;
+    padding-left: 26px;
+    padding-top: 17px;
+    font-size: 16px;
+    font-weight: 400;   
+}
+@media screen and (max-width: 767px) {
+    .title {
+        font-size: 13px;
+    }
+}
+
+.logo {
+    display: flex;
+    margin-left: -160px;
+    z-index: 2;
+    margin-top: 21px;    
+}
+@media screen and (max-width: 767px) {
+    .logo {
+       margin-right: -300px;
+    }
+}
+
+.total-dolar {
+    font-family: 'DM sans';
+    color: white;
+    margin-top: 8%;
+    font-size: 30px;
+    margin-left: -87%;
+    float: left;
+    font-weight: 700;
+}
+@media screen and (max-width: 767px){
+    .total-dolar {
+        z-index: 1;
+        position: relative;
+        margin-left: 6%;
+        margin-top: 11%;
+        font-size: 26px;
+    }
+}
+
+.dados {
+    background-color: hsl(0, 0%, 99%);
+    position: relative;
+    margin-top: 1ch;
+    margin-left: 35%;
+    border-radius: 9px;
+    width: 430px;
+    height: 366px;
+}
+@media screen and (max-width: 767px) {
+      .balance, .content, .dados {
+      margin: 20px 50px 15px 35px;
+      width: 340px;
+      margin-top: 1ch;
+      border-radius: 10px;
+    }
+}
+
+.graphbox {
+    text-align: center;
+    position: relative;
+    font-family: 'DM Sans';
+    float: left;
+    margin-left: 6%;
+    margin-top: 3%;
+    font-size: 25px;
+    color: hsl(25, 47%, 15%);
+    font-weight: 700; 
+}
+@media screen and (max-width: 767px) {
+    .graphbox {
+        font-size: 22px;
+        margin-top: 6%;
+    }
+}
+
+#myChart {
+    width:100%;
+    max-width:440px;
+    z-index:1;
+}
+@media screen and (max-width: 767px) {
+    #myChart {
+        margin-bottom: -60%;
+    }
+}
+
+.total {
+    position: relative;
+    float: left;
+    margin-top: 3%;
+    margin-left: 9%;
+    font-family: 'DM Sans';
+    color: hsl(28, 10%, 53%);
+    font-weight: 400;  
+}
+@media screen and (max-width: 767px) {
+    .total {
+        margin-top: 65%;
+    }
+}
+
+.dolar {
+    font-size: 40px;
+    margin-right: 45%;
+    margin-left: 8%;
+    font-family: "DM Sans";
+    color: hsl(25, 47%, 15%);
+    font-weight: 700;
+}
+@media screen and (max-width: 767px) {
+    .dolar {
+        font-size: 32px;
+    }
+}
+
+.money {
+    position: relative;
+    float: right;
+    margin-top: -45px;
+    margin-right: 8%;
+    font-family: "DM Sans";
+    font-weight: 700;
+    color: hsl(25, 47%, 15%);
+}
+@media screen and (max-width: 767px) {
+    .money {
+       margin-top: -13%;
+    }
+}
+
+.month {
+    position: relative;
+    float: right;
+    margin-left: 50%;
+    margin-top: -6%;
+    margin-right: 8%;
+    font-family: "DM Sans";
+    color: hsl(28, 10%, 53%);
+    font-weight: 400;
+}
+@media screen and (max-width: 767px) {
+     .month {
+        margin-top: -7%;
+        margin-left: 6%;
+        font-size: 14px;
+    }
+}
+
+.attribution { font-size: 12px; text-align: center; margin-top: 1%;}
+.attribution { color: hsl(25, 47%, 15%); text-decoration: none; font-family: "DM Sans"; outline: none}
